@@ -1,1 +1,2 @@
-Just a personal online CV.
+It's just a CV
+https://bortein.com/
