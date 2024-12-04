@@ -1,5 +1,5 @@
-@import "../scss-variables";
-@import "../mixins";
+@use "../scss-variables";
+@use "../mixins";
 
 .title {
   grid-area: title;
@@ -13,16 +13,16 @@
     margin: 0 0 18px;
     font-size: 3.25rem;
     line-height: 3.5rem;
-    font-weight: $font-weight-bold;
+    font-weight: scss-variables.$font-weight-bold;
     text-transform: uppercase;
-    letter-spacing: $letter-spacing;
+    letter-spacing: scss-variables.$letter-spacing;
   }
 
   &__position {
     margin: 0 0 18px;
     font-size: 1.125rem;
     line-height: 1.25rem;
-    font-weight: $font-weight-light;
+    font-weight: scss-variables.$font-weight-light;
     color: var(--light-text-color);
   }
 
@@ -36,7 +36,7 @@
   }
 }
 
-@include going-large($breakpoint-x-small) {
+@include mixins.going-large(scss-variables.$breakpoint-x-small) {
   .title {
     display: flex;
     text-align: left;

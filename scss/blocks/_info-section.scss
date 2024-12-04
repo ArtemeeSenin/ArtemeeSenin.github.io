@@ -1,31 +1,31 @@
-@import "../scss-variables";
-@import "../mixins";
+@use "../scss-variables";
+@use "../mixins";
 
 .info-section {
-  margin-bottom: $spacing;
+  margin-bottom: scss-variables.$spacing;
 
   &:last-child {
     margin-bottom: 80px;
   }
 
   & + & {
-    padding-top: $spacing;
-    border-top: $border;
+    padding-top: scss-variables.$spacing;
+    border-top: scss-variables.$border;
   }
 
   &__heading {
     margin: 0 0 1.75rem;
     font-size: 1.375rem;
     line-height: 1.5rem;
-    font-weight: $font-weight-bold;
+    font-weight: scss-variables.$font-weight-bold;
     text-transform: uppercase;
-    letter-spacing: $letter-spacing;
+    letter-spacing: scss-variables.$letter-spacing;
 
     &:after {
       content: '';
       display: block;
       height: 4px;
-      width: $spacing;
+      width: scss-variables.$spacing;
       background-color: #000;
       margin-top: 8px;
     }
@@ -120,7 +120,7 @@
   }
 }
 
-@include going-large($breakpoint-medium) {
+@include mixins.going-large(scss-variables.$breakpoint-medium) {
   .info-section {
     &--no-border {
       margin-bottom: 56px;
