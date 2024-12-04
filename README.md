@@ -1,2 +1,1 @@
-It's just a CV
-https://bortein.com/
+It is just a CV: https://bortein.com/
