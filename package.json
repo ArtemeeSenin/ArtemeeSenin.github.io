@@ -6,12 +6,12 @@
   "main": "index.js",
   "scripts": {
     "run-all": "npm-run-all",
-    "build": "npm run scss -- --output-style compressed && npm run save-pdf",
+    "build": "npm run scss --style=compressed && npm run save-pdf",
     "serve": "npx http-server ./ -p 3000",
     "save-pdf": "npm run run-all -- -p -r serve pdf-gen",
     "pdf-gen": "node pdf-gen/index.js",
-    "dev": "npm run scss -- -rw",
-    "scss": "node-sass scss/main.scss -o css/",
+    "dev": "npm run scss -- -w",
+    "scss": "sass scss/main.scss css/main.css",
     "deploy": "npm run build && git add --all && git commit -m 'build' && git push origin master"
   },
   "repository": {
@@ -24,9 +24,9 @@
     "url": "https://github.com/ArtemeeSenin/artemeesenin.github.io/issues"
   },
   "devDependencies": {
-    "http-server": "^14.0.0",
-    "node-sass": "^7.0.0",
-    "puppeteer": "^13.0.1"
+    "http-server": "^14.1.1",
+    "puppeteer": "^23.9.0",
+    "sass": "^1.81.1"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"
