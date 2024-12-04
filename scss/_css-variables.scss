@@ -1,5 +1,5 @@
-@import "scss-variables";
-@import "mixins";
+@use "scss-variables";
+@use "mixins";
 
 html {
   --base-font-size: 12px;
@@ -12,13 +12,13 @@ html {
   --secondary-background-color: #f2f5fa;
 }
 
-@include going-large($breakpoint-x-small) {
+@include mixins.going-large(scss-variables.$breakpoint-x-small) {
   html {
     --base-font-size: 14px;
   }
 }
 
-@include going-large($breakpoint-small) {
+@include mixins.going-large(scss-variables.$breakpoint-small) {
   html {
     --base-font-size: 16px;
   }
