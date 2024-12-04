@@ -1,8 +1,8 @@
-@import "../css-variables";
-@import "../scss-variables";
-@import "../mixins";
+@use "../css-variables";
+@use "../scss-variables";
+@use "../mixins";
 
-@include print() {
+@include mixins.print() {
   .break-page {
     break-before: page;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@include going-large($breakpoint-x-small) {
+@include mixins.going-large(scss-variables.$breakpoint-x-small) {
   .dot-spacing {
     &::after {
       display: none;
@@ -30,7 +30,7 @@
   }
 }
 
-@include print() {
+@include mixins.print() {
   .hide-on-print {
     display: none !important;
   }
